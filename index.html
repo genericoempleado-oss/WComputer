@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>WComputer — Mantenimiento de equipos con impacto social</title>
+<meta content="WComputer: mantenimiento, soporte técnico y ensamblaje de equipos para zonas rurales con energía solar, conectividad híbrida, reciclaje electrónico y formación digital." name="description"/>
+<meta content="WComputer — Mantenimiento de equipos con impacto social" property="og:title"/>
+<meta content="Servicios de mantenimiento, soporte y ensamblaje con enfoque rural, accesible y sostenible." property="og:description"/>
+<meta content="tecnico.jpg" property="og:image"/>
+<link href="data:image/svg+xml;utf8,%0A%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%27grad%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%25230f766e%27/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%25230ea5a4%27/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%27100%27%20height%3D%27100%27%20rx%3D%2720%27%20ry%3D%2720%27%20fill%3D%27url%28%2523grad%29%27/%3E%0A%20%20%3Ctext%20x%3D%2750%25%27%20y%3D%2758%25%27%20font-family%3D%27Inter%2C%20sans-serif%27%20font-size%3D%2760%27%20font-weight%3D%27700%27%20text-anchor%3D%27middle%27%20fill%3D%27white%27%3EW%3C/text%3E%0A%3C/svg%3E%0A" rel="icon"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+<style>
+    :root{
+      --brand-1:#0f766e;
+      --brand-2:#0ea5a4;
+      --accent:#16a34a;
+      --muted:#6b7280;
+    }
+    *{box-sizing:border-box;transition:.28s cubic-bezier(.2,.9,.3,1);}
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; -webkit-font-smoothing:antialiased;}
+    header.site-header{background:rgba(255,255,255,0.86);backdrop-filter:blur(6px);transition:all .35s;}
+    header.site-header.scrolled{background:#fff;box-shadow:0 8px 30px rgba(15,118,110,0.06);}
+    .card{border-radius:12px;transition:transform .35s,box-shadow .35s;}
+    .card:hover{transform:translateY(-8px);box-shadow:0 12px 30px rgba(2,6,23,0.06);}
+    .hero-media{transition:transform .35s ease;}
+    .whatsapp-wrap{position:fixed;z-index:1200;right:26px;bottom:26px;display:flex;align-items:center;justify-content:center;}
+    .whatsapp-btn{width:66px;height:66px;border-radius:50%;display:flex;align-items:center;justify-content:center;padding:0;border:none;background:transparent;box-shadow:0 10px 30px rgba(16,118,110,0.18);animation:fadeBounce .9s ease both;}
+    .whatsapp-pulse{position:absolute;width:66px;height:66px;border-radius:50%;background:rgba(22,163,74,0.10);animation:pulse 2.2s infinite;z-index:-1;}
+    .whatsapp-icon{width:36px;height:36px;object-fit:contain;border-radius:50%;}
+    @keyframes pulse{0%{transform:scale(.9);opacity:.9}70%{transform:scale(1.5);opacity:0}100%{transform:scale(1.6);opacity:0}}
+    @keyframes fadeBounce{0%{opacity:0;transform:translateY(8px) scale(.95)}60%{opacity:1;transform:translateY(-6px) scale(1.02)}100%{transform:translateY(0) scale(1)}}
+    .tooltip{position:absolute;bottom:86px;right:0;transform:translateX(-6px);background:#fff;color:#000;padding:8px 10px;border-radius:8px;font-size:13px;box-shadow:0 8px 20px rgba(2,6,23,0.08);white-space:nowrap;opacity:0;pointer-events:none;transition:all 180ms;}
+    .whatsapp-wrap:hover .tooltip,.whatsapp-wrap:focus-within .tooltip{opacity:1;transform:translateX(0) translateY(-6px);pointer-events:auto;}
+    @media (max-width:640px){.whatsapp-wrap{right:50%;transform:translateX(50%);bottom:18px}.tooltip{right:50%;transform:translateX(.5rem);bottom:86px}}
+
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+    .prose-max{max-width:80ch}
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+<header class="site-header sticky top-0 z-40" role="banner">
+<div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-md bg-gradient-to-br from-[var(--brand-1)] to-[var(--brand-2)] flex items-center justify-center text-white font-bold">W</div>
+<div>
+<span class="text-lg font-semibold text-[var(--brand-1)]">WComputer</span>
+<p class="text-xs text-[var(--muted)] -mt-0.5">Mantenimiento y soporte con impacto social</p>
+</div>
+</div>
+<nav aria-label="Principal" class="flex items-center gap-6 text-sm" role="navigation">
+<a class="hover:text-[var(--brand-1)]" href="#beneficios">Beneficios</a>
+<a class="hover:text-[var(--brand-1)]" href="#segmentos">Segmentos</a>
+<a class="hover:text-[var(--brand-1)]" href="#valor">Propuesta</a>
+<a class="hover:text-[var(--brand-1)]" href="#contacto">Contacto</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="py-16">
+<div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+<div data-aos="fade-right">
+<span class="inline-flex items-center gap-2 text-sm font-medium text-green-700 bg-green-50 px-3 py-1 rounded-full w-max">Servicio principal · Mantenimiento</span>
+<h1 class="mt-6 text-4xl font-extrabold text-slate-900">Mantenimiento de equipos confiable y accesible para zonas rurales</h1>
+<p class="mt-4 text-lg text-slate-700 prose-max">En WComputer nos especializamos en mantenimiento preventivo y correctivo, soporte técnico y ensamblaje de equipos diseñados para resistir condiciones rurales. Reducimos la interrupción educativa y productiva con soluciones energéticamente eficientes y modelos de suscripción accesibles.</p>
+<div class="mt-6 flex flex-col sm:flex-row gap-3">
+<a class="px-5 py-3 rounded-md bg-[var(--brand-1)] text-white font-semibold hover:brightness-95 focus-ring shadow-sm" href="https://wa.me/573001234567?text=Hola%20quiero%20mantenimiento%20con%20WComputer" target="_blank">Habla con un asesor técnico</a>
+<a class="px-5 py-3 rounded-md border border-slate-200 text-[var(--brand-1)] font-semibold hover:bg-slate-50 focus-ring" href="#contacto">Solicita presupuesto</a>
+</div>
+<ul class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-700">
+<li class="flex items-start gap-3"><svg class="w-5 h-5 text-[var(--brand-2)]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span><strong>Mantenimiento preventivo</strong> para prolongar la vida útil del equipo.</span></li>
+<li class="flex items-start gap-3"><svg class="w-5 h-5 text-[var(--brand-2)]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><span><strong>Soporte remoto e in situ</strong> con SLA para instituciones.</span></li>
+</ul>
+</div>
+<div class="rounded-2xl p-6 shadow-lg bg-gradient-to-br from-[var(--brand-2)]/8 to-[var(--accent)]/6 hero-media card" data-aos="zoom-in">
+<div class="overflow-hidden rounded-lg">
+<img alt="Técnico instalando panel solar en escuela rural" class="w-full h-64 object-cover" src="tecnico.jpg"/>
+</div>
+<div class="mt-4">
+<h3 class="text-lg font-semibold text-slate-900">Kits y soporte adaptado</h3>
+<p class="mt-2 text-sm text-slate-700">Ofrecemos equipos de bajo consumo, monitoreo remoto y mantenimiento programado para evitar fallas y pérdida de productividad.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 bg-white" id="beneficios">
+<div class="max-w-6xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-[var(--brand-1)] mb-6 text-center" data-aos="fade-up">Beneficios destacados</h2>
+<div class="grid md:grid-cols-4 gap-6">
+<article class="p-6 bg-slate-50 card" data-aos="fade-up" data-aos-delay="100">
+<h3 class="font-semibold text-slate-900">Energía solar</h3>
+<p class="text-sm mt-2">Instalaciones con paneles y baterías para continuidad en cortes de red.</p><div class="mt-4 flex justify-center"><svg fill="url(#grad)" height="40" viewbox="0 0 24 24" width="40" xmlns="http://www.w3.org/2000/svg"><defs><lineargradient id="grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="var(--brand-1)"></stop><stop offset="100%" stop-color="var(--brand-2)"></stop></lineargradient></defs><path d="M12 4a1 1 0 0 1 1 1v1.05a7.002 7.002 0 0 1 6.45 6.45H21a1 1 0 1 1 0 2h-1.55a7.002 7.002 0 0 1-6.45 6.45V19a1 1 0 1 1-2 0v-1.55a7.002 7.002 0 0 1-6.45-6.45H3a1 1 0 1 1 0-2h1.55A7.002 7.002 0 0 1 11 6.05V5a1 1 0 0 1 1-1z"></path></svg></div>
+</article>
+<article class="p-6 bg-slate-50 card" data-aos="fade-up" data-aos-delay="200">
+<h3 class="font-semibold text-slate-900">Conectividad híbrida</h3>
+<p class="text-sm mt-2">Solucciones LTE/satélite + Wi‑Fi local para operar sin internet fijo.</p><div class="mt-4 flex justify-center"><svg fill="url(#grad)" height="40" viewbox="0 0 24 24" width="40" xmlns="http://www.w3.org/2000/svg"><defs><lineargradient id="grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="var(--brand-1)"></stop><stop offset="100%" stop-color="var(--brand-2)"></stop></lineargradient></defs><path d="M12 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM4.93 10.93a10 10 0 0 1 14.14 0 1 1 0 1 0 1.41-1.41 12 12 0 0 0-16.97 0 1 1 0 0 0 1.42 1.41zM7.76 13.76a6 6 0 0 1 8.48 0 1 1 0 0 0 1.41-1.41 8 8 0 0 0-11.3 0 1 1 0 1 0 1.41 1.41z"></path></svg></div>
+</article>
+<article class="p-6 bg-slate-50 card" data-aos="fade-up" data-aos-delay="300">
+<h3 class="font-semibold text-slate-900">Reciclaje electrónico</h3>
+<p class="text-sm mt-2">Reacondicionamos equipos para reducir costos y residuos.</p><div class="mt-4 flex justify-center"><svg fill="url(#grad)" height="40" viewbox="0 0 24 24" width="40" xmlns="http://www.w3.org/2000/svg"><defs><lineargradient id="grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="var(--brand-1)"></stop><stop offset="100%" stop-color="var(--brand-2)"></stop></lineargradient></defs><path d="M16.24 3.56 20 8h-3v4h-2V8h-3l3.76-4.44a1 1 0 0 1 1.48 0zM7.76 20.44 4 16h3v-4h2v4h3l-3.76 4.44a1 1 0 0 1-1.48 0zM5 11h14v2H5z"></path></svg></div>
+</article>
+<article class="p-6 bg-slate-50 card" data-aos="fade-up" data-aos-delay="400">
+<h3 class="font-semibold text-slate-900">Formación digital</h3>
+<p class="text-sm mt-2">Capacitaciones para docentes y emprendedores en uso y mantenimiento básico.</p><div class="mt-4 flex justify-center"><svg fill="url(#grad)" height="40" viewbox="0 0 24 24" width="40" xmlns="http://www.w3.org/2000/svg"><defs><lineargradient id="grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="var(--brand-1)"></stop><stop offset="100%" stop-color="var(--brand-2)"></stop></lineargradient></defs><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM11 21v-6l-8-4v2l8 4v4h2v-4l8-4v-2l-8 4v6h-2z"></path></svg></div>
+</article>
+</div>
+</div>
+</section>
+<section class="py-16 bg-slate-50" id="segmentos">
+<div class="max-w-6xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-[var(--brand-1)] mb-6 text-center" data-aos="fade-up">A quién servimos</h2>
+<div class="grid md:grid-cols-3 gap-6">
+<div class="p-6 bg-white rounded-lg card" data-aos="fade-up" data-aos-delay="100">
+<h3 class="font-semibold text-slate-900">Instituciones educativas rurales</h3>
+<p class="text-sm mt-2">Sedes que requieren continuidad académica con mantenimiento programado y formación docente.</p><div class="mt-4 flex justify-center"><svg fill="url(#grad)" height="40" viewbox="0 0 24 24" width="40" xmlns="http://www.w3.org/2000/svg"><defs><lineargradient id="grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="var(--brand-1)"></stop><stop offset="100%" stop-color="var(--brand-2)"></stop></lineargradient></defs><path d="M12 3 1 9l11 6 11-6-11-6zm0 8.2-6.8-3.7L12 3.8l6.8 3.7L12 11.2z"></path><path d="M21 10v8h2v-8h-2zM3 10v8h2v-8H3zM12 13l-8-4v8h16v-8l-8 4z"></path></svg></div>
+</div>
+<div class="p-6 bg-white rounded-lg card" data-aos="fade-up" data-aos-delay="200">
+<h3 class="font-semibold text-slate-900">Bibliotecas y telecentros</h3>
+<p class="text-sm mt-2">Puntos comunitarios que necesitan equipos robustos y soporte técnico confiable.</p><div class="mt-4 flex justify-center"><svg fill="url(#grad)" height="40" viewbox="0 0 24 24" width="40" xmlns="http://www.w3.org/2000/svg"><defs><lineargradient id="grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="var(--brand-1)"></stop><stop offset="100%" stop-color="var(--brand-2)"></stop></lineargradient></defs><path d="M3 4h18v2H3V4zm0 4h18v12H3V8zm2 2v8h14v-8H5z"></path></svg></div>
+</div>
+<div class="p-6 bg-white rounded-lg card" data-aos="fade-up" data-aos-delay="300">
+<h3 class="font-semibold text-slate-900">Microempresas rurales</h3>
+<p class="text-sm mt-2">Negocios que buscan digitalizar operaciones con equipos mantenidos y soporte rápido.</p><div class="mt-4 flex justify-center"><svg fill="url(#grad)" height="40" viewbox="0 0 24 24" width="40" xmlns="http://www.w3.org/2000/svg"><defs><lineargradient id="grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="var(--brand-1)"></stop><stop offset="100%" stop-color="var(--brand-2)"></stop></lineargradient></defs><path d="M4 4h16v2H4V4zm0 4h16v10H4V8zm2 2v6h12v-6H6z"></path></svg></div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 bg-white" id="valor">
+<div class="max-w-4xl mx-auto px-4 text-center" data-aos="fade-up">
+<h2 class="text-3xl font-bold text-[var(--brand-1)] mb-4">Nuestra propuesta de valor</h2>
+<p class="text-lg text-slate-700">Mantenimiento preventivo y correctivo, soporte local y remoto, y modelos de suscripción con impacto social. Cofinanciación con alcaldías y ONG para ampliar alcance.</p>
+</div>
+</section>
+<section class="py-16 bg-slate-50" id="contacto">
+<div class="max-w-5xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+<div data-aos="fade-right">
+<h2 class="text-3xl font-bold text-[var(--brand-1)]">Conecta tu comunidad hoy</h2>
+<p class="mt-3 text-slate-700">Solicita mantenimiento programado, asesoría técnica o cotización para kits solares y conectividad híbrida.</p>
+<ul class="mt-4 text-sm text-slate-700 space-y-2">
+<li>• Planes de mantenimiento por suscripción</li>
+<li>• Respuesta in situ y soporte remoto</li>
+<li>• Programas de reciclaje y formación local</li>
+</ul>
+</div>
+<div data-aos="fade-left">
+<form class="bg-slate-50 p-6 rounded-lg shadow-sm" id="contactForm" onsubmit="handleSubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<label class="sr-only" for="name">Nombre</label>
+<input class="focus-ring w-full px-3 py-2 rounded-md border" id="name" name="name" placeholder="Nombre completo" required=""/>
+<label class="sr-only" for="org">Organización</label>
+<input class="w-full px-3 py-2 rounded-md border" id="org" name="org" placeholder="Institución o empresa (opcional)"/>
+</div>
+<label class="sr-only" for="email">Correo</label>
+<input class="mt-3 w-full px-3 py-2 rounded-md border focus-ring" id="email" name="email" placeholder="Correo electrónico" required="" type="email"/>
+<label class="sr-only" for="message">Mensaje</label>
+<textarea class="mt-3 w-full px-3 py-2 rounded-md border focus-ring" id="message" name="message" placeholder="Cuéntanos tu necesidad: mantenimiento, asesoría o presupuesto" rows="4"></textarea>
+<div class="mt-4 flex gap-2">
+<button class="inline-flex items-center justify-center px-4 py-2 rounded-md bg-[var(--brand-1)] text-white font-semibold focus-ring shadow-sm" type="submit">Solicitar asesoría</button>
+<button class="inline-flex items-center justify-center px-4 py-2 rounded-md border text-[var(--brand-1)] font-semibold focus-ring" onclick="openWhatsAppQuick()" type="button">Contactar por WhatsApp</button>
+</div>
+<p class="mt-3 text-xs text-slate-500">También puedes escribirnos a <a class="underline" href="mailto:contacto@wcomputer.co">contacto@wcomputer.co</a></p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white border-t py-6 text-center text-sm text-slate-600">
+  © <span id="year"></span> WComputer — Innovación con propósito.
+</footer>
+<!-- WhatsApp floating using provided icon -->
+<div aria-label="Chat por WhatsApp" class="whatsapp-wrap" role="dialog">
+<div class="tooltip" role="tooltip">💬 Chatea con nosotros</div>
+<a aria-label="Abrir WhatsApp" class="whatsapp-btn" href="https://wa.me/573001234567?text=Hola%20quiero%20mantenimiento%20con%20WComputer" target="_blank">
+<span aria-hidden="true" class="whatsapp-pulse"></span>
+<img alt="WhatsApp" class="whatsapp-icon" src="whatsapp_icon.png"/>
+</a>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true, easing: 'ease-out-cubic' });
+
+  // header bg on scroll
+  const header = document.querySelector('header.site-header');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 20));
+
+  function openWhatsAppQuick(){ window.open('https://wa.me/573001234567?text=Hola%20quiero%20mantenimiento%20con%20WComputer','_blank'); }
+  function handleSubmit(e){ e.preventDefault(); const name = document.getElementById('name').value || 'Usuario'; alert('Gracias, '+name+'. Hemos recibido tu solicitud. Te contactaremos pronto.'); e.target.reset(); }
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth',block:'start'}); }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
